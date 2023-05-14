@@ -7,12 +7,12 @@ pipeline {
     stages {
        stage('build') {
          steps {
-          sh 'pip install -r ./jenkins/requirements.txt'
+          sh 'pip install -r requirements.txt'
      }
     }
       stage('test') {
         steps {
-         sh './jenkins/scripts/app.py'
+         sh './jenkins/python test.py'
       }
       }
        post {
