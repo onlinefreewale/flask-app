@@ -3,7 +3,9 @@ pipeline {
        docker 
          { image 'python:3.7.2' } 
     }
-
+       node('label'){
+           def workspace = pwd()
+       }       
     stages {
        stage('build') {
          steps {
